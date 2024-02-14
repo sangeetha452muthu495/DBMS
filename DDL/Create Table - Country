@@ -1,0 +1,9 @@
+create table countries(country_id int, country_name varchar(100),region_id int);
+insert into countries(country_id , country_name ,region_id) values(345,'India',67);
+insert into countries(country_id , country_name ,region_id) values(3412,'America',90);
+insert into countries(country_id , country_name ,region_id) values(345098,'Japan',21);
+
+create table if not exists dup_countries like countries;
+insert into dup_countries select*from countries;
+select * from countries;
+select * from dup_countries;
