@@ -1,0 +1,23 @@
+/* Write a MySQL query to create a table named jobs including columns job_id, job_title, 
+min_salary, max_salary and check whether the max_salary amount exceeding the upper limit 25000.---*/
+create table job(job_id int,job_title varchar(100),min_salary int,max_salary int);
+insert into job values(56,"Accountant",10000,30000);
+insert into job values(45,"Clerk",5000,10000);
+insert into job values(42,"Manager",80000,100000);
+-- Adding New column --
+alter table job add column job_reference Varchar(100);
+-- Changing the column name--
+alter table job change column job_reference Duty varchar(100);
+-- Changing the datatype --
+alter table job change  job_id job_id varchar(100);
+-- Drop the table --
+drop table job;
+-- Select the specific column --
+select job_id,Duty from job;
+-- Update column --
+update job set Duty ='NightShift';
+-- Update the particular element --
+update job set max_salary = 120000 where job_title = 'Accountant';
+select * from job;
+-- Delete particular element --
+delete from job where job_title = "Accountant";
