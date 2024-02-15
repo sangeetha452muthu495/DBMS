@@ -1,0 +1,10 @@
+create table Customer_care(customer_id int,Name varchar(100),Address varchar(100),City varchar(100),State varchar(100),Zip_code int);
+insert into Customer_care  values(1,"John Doe","392  Sunser Bird","New York","NT",1009);
+insert into Customer_care values(2,"Mary Smith","6900 Main street","San Francisco","CA",9400);
+insert into Customer_care values(3,"Richard Newmain","2030 Riverside road","San Diego","CA",92010);
+insert into Customer_care values(4,"Cathy Cook","4010 Speed Way","Tucson","AZ",85719);
+select * from Customer_care;
+alter table Customer_care change column Address Customer_address varchar(100);
+alter table Customer_care add column Mobile_number int;
+-- Deleting the particular element --
+delete from Customer_care where mobile_number is null;
